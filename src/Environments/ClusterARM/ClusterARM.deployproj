@@ -27,18 +27,15 @@
   <ItemGroup>
     <Folder Include="Scripts\" />
     <Folder Include="Tools\" />
+    <Folder Include="Templates\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Deployment.targets">
       <Visible>False</Visible>
     </None>
     <Content Include="Scripts\Deploy-AzureResourceGroup.ps1" />
-    <None Include="Templates\TestServiceFabricClusterTemplate.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Templates\TestServiceFabricClusterTemplate.parameters.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <Content Include="Templates\TestServiceFabricClusterTemplate.json"/>
+    <Content Include="Templates\TestServiceFabricClusterTemplate.parameters.json"/>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Tools\AzCopy.exe" />
