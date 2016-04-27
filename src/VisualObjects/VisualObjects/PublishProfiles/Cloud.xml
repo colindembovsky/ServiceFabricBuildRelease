@@ -16,6 +16,9 @@
                                     StoreName="My" />
 
   -->
-  <ClusterConnectionParameters ConnectionEndpoint="Please specify a connection endpoint." />
+  <ClusterConnectionParameters ConnectionEndpoint="colincluster.eastus.cloudapp.azure.com:19080" />
   <ApplicationParameterFile Path="..\ApplicationParameters\Cloud.xml" />
+  <UpgradeDeployment Mode="Monitored" Enabled="true">
+    <Parameters FailureAction="Rollback" Force="True" />
+  </UpgradeDeployment>
 </PublishProfile>
