@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ApplicationManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ApplicationTypeName="VisualObjectsApplicationType" ApplicationTypeVersion="2.0.0" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+<ApplicationManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ApplicationTypeName="VisualObjectsApplicationType" ApplicationTypeVersion="1.0.0" xmlns="http://schemas.microsoft.com/2011/01/fabric">
    <Parameters>
       <Parameter Name="VisualObjects.WebService_InstanceCount" DefaultValue="1" />
       <Parameter Name="VisualObjects.ActorService_PartitionCount" DefaultValue="10" />
@@ -11,7 +11,7 @@
       <ConfigOverrides />
    </ServiceManifestImport>
    <ServiceManifestImport>
-      <ServiceManifestRef ServiceManifestName="VisualObjects.ActorServicePkg" ServiceManifestVersion="2.0.0" />
+      <ServiceManifestRef ServiceManifestName="VisualObjects.ActorServicePkg" ServiceManifestVersion="1.0.0" />
    </ServiceManifestImport>
    <DefaultServices>
       <Service Name="VisualObjects.WebService">
