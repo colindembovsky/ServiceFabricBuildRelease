@@ -16,8 +16,9 @@
                                     StoreName="My" />
 
   -->
-  <ClusterConnectionParameters ConnectionEndpoint="colincluster.eastus.cloudapp.azure.com:19000" />
-  <ApplicationParameterFile Path="..\ApplicationParameters\Cloud.xml" />
+  <!-- Put in the connection to the Prod cluster here -->
+  <ClusterConnectionParameters ConnectionEndpoint="__ClusterName__.eastus.cloudapp.azure.com:19000" />
+  <ApplicationParameterFile Path="..\ApplicationParameters\ProdCloud.xml" />
   <UpgradeDeployment Mode="Monitored" Enabled="true">
     <Parameters FailureAction="Rollback" Force="True" />
   </UpgradeDeployment>

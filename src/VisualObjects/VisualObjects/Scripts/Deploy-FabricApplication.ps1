@@ -184,7 +184,13 @@ Import-Module "$ModuleFolderPath\ServiceFabricSDK.psm1"
 
 $IsUpgrade = ($publishProfile.UpgradeDeployment -and $publishProfile.UpgradeDeployment.Enabled -and $OverrideUpgradeBehavior -ne 'VetoUpgrade') -or $OverrideUpgradeBehavior -eq 'ForceUpgrade'
 
-if ($IsUpgrade)
+# check if this application exists or not
+$ManifestFilePath = "$ApplicationPackagePath\ApplicationManifest.xml"
+$manifestXml = [Xml] (Get-Content $ManifestFilePath)
+$AppTypeName = $manifestXml.ApplicationManifest.ApplicationTypeName
+$AppExists = (Get-ServiceFabricApplication | ? { $_.ApplicationTypeName -eq $AppTypeName }) -ne $null
+
+if ($IsUpgrade -and $AppExists)
 {
     $Action = "RegisterAndUpgrade"
     if ($DeployOnly)
