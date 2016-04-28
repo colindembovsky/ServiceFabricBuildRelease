@@ -1,6 +1,6 @@
 # Continuous Deployment of Service Fabric Apps using VSTS
-For the full story, read [this post](http://colinsalmcorner.com/). The demo application is the Visual Objects
-demo from [this repo](https://github.com/Azure-Samples/service-fabric-dotnet-getting-started).
+For the full story, read [this post](http://www.colinsalmcorner.com/post/continuous-deployment-of-service-fabric-apps-using-vsts-or-tfs).
+The demo application is the Visual Objects demo from [this repo](https://github.com/Azure-Samples/service-fabric-dotnet-getting-started).
 
 ## Using the Sample
 There are a couple of files that you'll need to edit in order to get this to work:
@@ -23,7 +23,7 @@ There are a couple of files that you'll need to edit in order to get this to wor
     The app parameters files are in `src/VisualObjects/VisualObjects/ApplicationParameters`.
 
 ## Demo
-To demo the pipeline, create the build and release as outlined in (this post)[http://colinsalmcorner.com/].
+To demo the pipeline, create the build and release as outlined in (this post)[http://www.colinsalmcorner.com/post/continuous-deployment-of-service-fabric-apps-using-vsts-or-tfs].
 
 Run the build and release to Test. Browse to the test application endpoint:
 
