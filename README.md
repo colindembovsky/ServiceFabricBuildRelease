@@ -1,5 +1,6 @@
 # Continuous Deployment of Service Fabric Apps using VSTS
-For the full story, read (this post)[http://colinsalmcorner.com/].
+For the full story, read [this post](http://colinsalmcorner.com/). The demo application is the Visual Objects
+demo from [this repo](https://github.com/Azure-Samples/service-fabric-dotnet-getting-started).
 
 ## Using the Sample
 There are a couple of files that you'll need to edit in order to get this to work:
@@ -7,7 +8,7 @@ There are a couple of files that you'll need to edit in order to get this to wor
 1. Edit the ARM templates
     There are two templates in the ARM project: one for a test environment and one for prod. Currently
     these both set up an unsecured cluster of 3 nodes. The easiest way to get your ARM template is to 
-    log on to (the Azure portal)[http://portal.azure.com] and create a new Service Fabric Cluster. At
+    log on to [the Azure portal](http://portal.azure.com) and create a new Service Fabric Cluster. At
     the end of the journey, just before clicking create, there is an "Export Template" button which
     you can use to export the ARM template. I extracted some of the parameter values into the 
     `parameters.json` file, but that's just a personal preference.
